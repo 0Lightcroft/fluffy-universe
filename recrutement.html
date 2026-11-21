@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>FluffyTests — Outil de recrutement | Lightcroft</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;600;700&family=Cormorant+SC:wght@500;600;700&display=swap');
+:root{--paper:#f6f3ec;--panel:#faf8f3;--ink:#2b2621;--brown:#9b6b33;--line:#c9bba6;--muted:#6e655b}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.45 'Alegreya Sans',sans-serif}main{width:min(1120px,calc(100% - 32px));margin:auto;padding:35px 0 90px}header{border-bottom:2px solid var(--line);padding-bottom:20px}h1,h2{font-family:'Cormorant SC',serif;margin:0}h1{font-size:clamp(40px,6vw,68px);line-height:1}h2{font-size:32px}small,.sub{color:var(--muted)}.sub{max-width:800px;margin:15px 0 0}.panel{background:var(--panel);border:1px solid var(--line);padding:22px;box-shadow:5px 6px 0 #c0ab8d;margin-top:24px}.flex{display:flex;gap:15px;align-items:center;flex-wrap:wrap}button,a.action{font:700 15px 'Alegreya Sans',sans-serif;cursor:pointer;border:1px solid var(--ink);color:var(--paper);background:var(--ink);padding:9px 14px;text-decoration:none;display:inline-block}button.alt,a.action.alt{background:var(--panel);color:var(--ink)}button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--brown);outline-offset:3px}select{background:var(--panel);border:1px solid var(--line);padding:9px;font:inherit;color:var(--ink)}.note{font-size:15px;color:var(--muted)}.picture{max-width:540px;max-height:285px;object-fit:contain;background:#e9e2d7;border:1px solid var(--line);padding:4px;display:none}.preview{border:1px dashed var(--line);min-height:70px;padding:12px;margin-top:14px}.preview img{max-width:100%;max-height:280px;display:block;object-fit:contain}.lang-switch{display:flex;gap:8px;align-items:center}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-top:15px}.community{border:1px solid var(--line);background:var(--panel);padding:15px;display:flex;flex-direction:column;gap:8px}.community strong{font-size:22px}.community small{display:block}.community .actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}.tag{color:var(--brown);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:12px}textarea{width:100%;min-height:240px;resize:vertical;border:1px solid var(--line);padding:12px;background:#fffdfa;color:var(--ink);font:15px/1.4 sans-serif}#toast{position:fixed;bottom:18px;left:18px;background:#302820;color:#faf8f3;padding:10px 16px;display:none;max-width:calc(100% - 36px);z-index:2}#toast.show{display:block}.warning{border-left:3px solid var(--brown);padding-left:12px}a.textlink{color:var(--brown)}@media(max-width:720px){.grid{grid-template-columns:1fr}.panel{padding:16px}} 
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="tag">Lightcroft · Fluffy Projects</div>
+<h1>FluffyTests — Recrutement</h1>
+<p class="sub">Un tableau de bord pour préparer tes annonces de bêta-test Android. Il utilise <strong>tes textes</strong> et <strong>ta capture d'écran réelle</strong>, sans inventer d'illustration. Chaque communauté a son propre accès ; tu valides chaque publication toi-même.</p>
+</header>
+<section class="panel" aria-label="Préparation">
+<h2>1. Préparer une seule fois</h2>
+<div class="flex">
+<label class="lang-switch">Langue <select id="lang"><option value="fr">Français</option><option value="en">English</option></select></label>
+<label>Lien Google Play (facultatif) <input id="play" type="url" placeholder="https://play.google.com/apps/testing/..." style="width:min(390px,90vw);padding:9px;border:1px solid #c9bba6"></label>
+</div>
+<p><strong>Image de l'annonce :</strong> sélectionne <strong>ta capture FluffyCard</strong> (le fichier <code>miniature.png</code> que tu as partagé). Aucune image n'est remplacée ni modifiée.</p>
+<input id="file" type="file" accept="image/png,image/jpeg,image/webp" aria-label="Choisir la vraie image de FluffyCard">
+<div class="preview"><span id="noimage" class="note">Aucune image sélectionnée. Choisis ta propre capture FluffyCard pour la prévisualiser et la copier.</span><img id="img" alt="Ta capture FluffyCard — aperçu local" hidden></div>
+<div class="flex" style="margin-top:12px">
+<button id="copy-image" class="alt" type="button">Copier l'image sélectionnée</button>
+<button id="copy-text" type="button">Copier le texte</button>
+<button id="copy-title" class="alt" type="button">Copier le titre</button>
+</div>
+<p class="note">Pour Reddit ou Discord, colle le texte dans la publication, puis joins l'image. Selon le site, tu peux coller directement l'image depuis le presse-papiers ou l'ajouter avec son bouton « Image ».</p>
+</section>
+<section class="panel">
+<h2>2. Ton annonce</h2>
+<label for="title">Titre</label><input id="title" style="width:100%;padding:10px;margin:6px 0 12px;border:1px solid #c9bba6;font:inherit" aria-label="Titre de l'annonce">
+<label for="body">Texte modifiable</label><textarea id="body"></textarea>
+<p class="note">Le texte est modifiable avant de le publier. Le lien Google Play n'est inclus que si tu le renseignes.</p>
+</section>
+<section class="panel">
+<h2>3. Communautés — préparer la publication en un clic</h2>
+<p class="warning">Un clic prépare l'annonce et ouvre la communauté. <strong>Aucune publication automatique ni message privé de masse</strong> : les plateformes exigent une connexion et parfois un flair ou une vérification des règles. Les champs préremplis ne sont pas garantis sur toutes les versions de Reddit.</p>
+<div class="grid" id="list"></div>
+</section>
+<section class="panel"><h2>Liens utiles</h2>
+<p>Groupe de test : <a class="textlink" href="https://groups.google.com/g/fluffytests" target="_blank" rel="noopener noreferrer">https://groups.google.com/g/fluffytests</a></p>
+<p class="note">Pour les annonces francophones, choisis « Français » avant le clic. Pour Reddit international, choisis « English ». Consulte les règles du groupe avant de publier : certaines communautés refusent l'autopromotion ou les annonces répétées.</p>
+</section>
+</main><div id="toast" role="status" aria-live="polite"></div>
+<script>
+const communities=[
+{name:"r/AndroidClosedTesting",type:"reddit",slug:"AndroidClosedTesting",language:"en",note:"Tests fermés Google Play",priority:true},
+{name:"r/AndroidAppTesters",type:"reddit",slug:"AndroidAppTesters",language:"en",note:"Recrutement de testeurs Android",priority:true},
+{name:"r/TestMyApp",type:"reddit",slug:"TestMyApp",language:"en",note:"Retours sur les applications"},
+{name:"r/GooglePlayClosedTest",type:"reddit",slug:"GooglePlayClosedTest",language:"en",note:"Tests fermés / entraide"},
+{name:"r/betatests",type:"reddit",slug:"betatests",language:"en",note:"Bêta-tests de logiciels"},
+{name:"r/alphaandbetausers",type:"reddit",slug:"alphaandbetausers",language:"en",note:"Early adopters et bêta-testeurs"},
+{name:"r/SideProject",type:"reddit",slug:"SideProject",language:"en",note:"Projets indépendants ; vérifier les règles"},
+{name:"r/PlayMyApp",type:"reddit",slug:"PlayMyApp",language:"en",note:"Essais d'applications"},
+{name:"Game Dev Alliance",type:"discord",url:"https://discord.com/servers/game-dev-alliance-218745934652112899",language:"fr",note:"Communauté francophone de développement"},
+{name:"Indie Park",type:"discord",url:"https://discord.com/servers/indie-park-1021378341267320872",language:"fr",note:"Créateurs indépendants"},
+{name:"Abiding Bridge — JeuTeste",type:"web",url:"https://abidingbridge.com/discord/",language:"fr",note:"Playtests francophones"},
+{name:"Game Tester Discord",type:"discord",url:"https://discord.com/servers/game-tester-714118048155697153",language:"en",note:"Tests de jeux"},
+{name:"itch.io — Help Wanted",type:"web",url:"https://itch.io/board/10020/help-wanted-or-offered",language:"en",note:"Recrutement sur itch.io"}
+];
+const $=(id)=>document.getElementById(id);
+let userEdited=false;
+let currentImageFile=null;
+const group="https://groups.google.com/g/fluffytests";
+const translations={
+fr:{title:"🎮 [Bêta Android] FluffyCard 0.6.1 — recherche de testeurs",body:
+"🐾 Chalut tout le monde !\n\nJe suis développeur indépendant chez Lightcroft et je recherche des volontaires pour tester gratuitement FluffyCard, mon application Android de création de cartes, decks, plateaux et jeux de table, développée avec mon moteur personnel Fluffy Engine.\n\n📱 Android — tablette recommandée.\n🃏 Cartes, decks, tables, boîtes, plateaux et dessin.\n🐛 Je cherche des retours sur les bugs, les performances et l'ergonomie.\n\n1️⃣ Rejoindre le groupe FluffyTests :\n"+group+"\n\n2️⃣ S'inscrire au test Google Play dès que le lien est disponible.\n\n3️⃣ Installer FluffyCard et partager vos retours !\n\nSi possible, restez inscrits pendant 14 jours consécutifs pour aider à valider le test fermé Google Play.\n\nMerci pour votre aide ! 🐱\nLightcroft — Fluffy Projects"},
+en:{title:"🎮 [Android Closed Beta] FluffyCard 0.6.1 — testers wanted",body:
+"🐾 Hi everyone!\n\nI'm an independent developer at Lightcroft looking for volunteers to test FluffyCard, a free-to-test Android beta for creating cards, decks, boards and tabletop games. It's built with my own engine, Fluffy Engine.\n\n📱 Android — tablets recommended.\n🃏 Cards, decks, tables, boxes, boards and drawing tools.\n🐛 Looking for bug reports, performance feedback and usability feedback.\n\n1️⃣ Join the FluffyTests Google Group:\n"+group+"\n\n2️⃣ Opt in to the Google Play test when the link becomes available.\n\n3️⃣ Install FluffyCard and share your feedback!\n\nIf possible, please stay opted in for 14 consecutive days to help with Google Play closed testing.\n\nThanks for your support! 🐱\nLightcroft — Fluffy Projects"}};
+let lastLang="fr";
+function toast(s){$("toast").textContent=s;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),4200)}
+function buildText(lang){let o=translations[lang];let play=$("play").value.trim();return {title:o.title,body:o.body+(play?"\n\nGoogle Play opt-in:\n"+play:"")}}
+function renderText(){const x=buildText($("lang").value);$("title").value=x.title;$("body").value=x.body;lastLang=$("lang").value;userEdited=false}
+$("lang").addEventListener("change",renderText);
+$("play").addEventListener("input",()=>{if(!userEdited)renderText()});
+$("body").addEventListener("input",()=>userEdited=true);
+$("title").addEventListener("input",()=>userEdited=true);
+$("file").addEventListener("change",e=>{const f=e.target.files?.[0];if(!f)return; if(!f.type.startsWith("image/")){toast("Sélectionne un fichier image.");return} currentImageFile=f;const i=$("img");i.src=URL.createObjectURL(f);i.hidden=false;$("noimage").hidden=true;toast("Ta vraie capture est sélectionnée. Tu peux la copier.");});
+async function copyText(t){try{await navigator.clipboard.writeText(t);toast("Texte copié — colle-le dans le site ouvert.")}catch(err){toast("Copie manuellement le texte dans le champ de l'annonce.")}}
+$("copy-text").addEventListener("click",()=>copyText($("body").value));
+$("copy-title").addEventListener("click",()=>copyText($("title").value));
+$("copy-image").addEventListener("click",async()=>{if(!currentImageFile){toast("Choisis d'abord ta capture FluffyCard.");return}try{let png;if(currentImageFile.type==="image/png")png=currentImageFile;else{let bitmap=await createImageBitmap(currentImageFile);let canvas=document.createElement("canvas");canvas.width=bitmap.width;canvas.height=bitmap.height;canvas.getContext("2d").drawImage(bitmap,0,0);png=await new Promise(ok=>canvas.toBlob(ok,"image/png"))}await navigator.clipboard.write([new ClipboardItem({"image/png":png})]);toast("Ton image a été copiée. Colle-la dans la publication si le site le permet.")}catch(err){toast("Ce navigateur refuse la copie de l'image. Ajoute le fichier avec le bouton Image du site.")}});
+async function prepare(c){
+const x=buildText(c.language);
+$("lang").value=c.language;renderText();
+const title=$("title").value,body=$("body").value;
+let url=c.type==="reddit"?"https://www.reddit.com/r/"+encodeURIComponent(c.slug)+"/submit?title="+encodeURIComponent(title):c.url;
+window.open(url,"_blank","noopener,noreferrer");
+await copyText(body);
+}
+const parent=$("list");
+communities.forEach(c=>{
+let card=document.createElement("div");card.className="community";
+let head=document.createElement("strong");head.textContent=c.name;
+let tag=document.createElement("span");tag.className="tag";tag.textContent=c.language==="fr"?"Français":"English";
+let note=document.createElement("small");note.textContent=c.note;
+let actions=document.createElement("div");actions.className="actions";
+let btn=document.createElement("button");btn.textContent="Préparer et ouvrir";btn.onclick=()=>prepare(c);
+let rules=document.createElement("a");rules.className="action alt";rules.target="_blank";rules.rel="noopener noreferrer";rules.href=c.type==="reddit"?"https://www.reddit.com/r/"+encodeURIComponent(c.slug)+"/about/rules":c.url;rules.textContent=c.type==="reddit"?"Règles du forum":"Voir le site";
+actions.append(btn,rules);card.append(head,tag,note,actions);parent.append(card);
+});
+renderText();
+</script>
+</body></html>
