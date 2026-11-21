@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f3ec">
-  <meta name="description" content="Lightcroft — FluffyFighter, FluffyCard, FluffyDraw et Fluffy Engine. Jeux et outils de création développés au sein d'un même univers.">
+  <meta name="description" content="Lightcroft — Fluffy Fighters Tactical, FluffyCard, FluffyDraw et Fluffy Engine. Jeux et outils de création développés au sein d'un même univers.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Lightcroft — Les projets Fluffy">
   <meta property="og:description" content="FluffyFighter, FluffyCard, FluffyDraw et Fluffy Engine — jeux, création et technologie.">
@@ -23,12 +23,120 @@
         <img src="https://avatars.githubusercontent.com/u/167653028?v=4" width="46" height="46" alt="" class="brand-seal">
         <span class="brand-copy"><strong>Lightcroft</strong><small>Fluffy Projects</small></span>
       </a>
+      <div class="header-controls">
       <nav aria-label="Navigation principale" class="nav">
         <a href="#projets">Projets</a>
         <a href="#engine">Le moteur</a>
         <a href="#avenir">À venir</a>
         <a href="https://github.com/0Lightcroft" target="_blank" rel="noopener noreferrer" class="nav-link-out">GitHub <span aria-hidden="true">↗</span></a>
       </nav>
+        <div class="language-picker">
+          <label for="language-select" class="visually-hidden">Choisir une langue</label>
+          <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 4 6 4 9s-1 6-4 9c-3-3-4-6-4-9s1-6 4-9z"/></svg>
+          <select id="language-select" aria-label="Langue du site">
+          <option value="af">Afrikaans</option>
+          <option value="sq">Shqip</option>
+          <option value="am">አማርኛ</option>
+          <option value="ar">العربية</option>
+          <option value="hy">Հայերեն</option>
+          <option value="az">Azərbaycanca</option>
+          <option value="eu">Euskara</option>
+          <option value="be">Беларуская</option>
+          <option value="bn">বাংলা</option>
+          <option value="bs">Bosanski</option>
+          <option value="bg">Български</option>
+          <option value="ca">Català</option>
+          <option value="ceb">Cebuano</option>
+          <option value="zh-CN">中文（简体）</option>
+          <option value="zh-TW">中文（繁體）</option>
+          <option value="hr">Hrvatski</option>
+          <option value="cs">Čeština</option>
+          <option value="da">Dansk</option>
+          <option value="nl">Nederlands</option>
+          <option value="en">English</option>
+          <option value="eo">Esperanto</option>
+          <option value="et">Eesti</option>
+          <option value="fi">Suomi</option>
+          <option value="fr" selected>Français</option>
+          <option value="gl">Galego</option>
+          <option value="ka">ქართული</option>
+          <option value="de">Deutsch</option>
+          <option value="el">Ελληνικά</option>
+          <option value="gu">ગુજરાતી</option>
+          <option value="ht">Kreyòl ayisyen</option>
+          <option value="ha">Hausa</option>
+          <option value="he">עברית</option>
+          <option value="hi">हिन्दी</option>
+          <option value="hu">Magyar</option>
+          <option value="is">Íslenska</option>
+          <option value="ig">Igbo</option>
+          <option value="id">Bahasa Indonesia</option>
+          <option value="ga">Gaeilge</option>
+          <option value="it">Italiano</option>
+          <option value="ja">日本語</option>
+          <option value="jw">Basa Jawa</option>
+          <option value="kn">ಕನ್ನಡ</option>
+          <option value="kk">Қазақша</option>
+          <option value="km">ខ្មែរ</option>
+          <option value="ko">한국어</option>
+          <option value="ku">Kurdî</option>
+          <option value="ky">Кыргызча</option>
+          <option value="lo">ລາວ</option>
+          <option value="la">Latina</option>
+          <option value="lv">Latviešu</option>
+          <option value="lt">Lietuvių</option>
+          <option value="lb">Lëtzebuergesch</option>
+          <option value="mk">Македонски</option>
+          <option value="mg">Malagasy</option>
+          <option value="ms">Bahasa Melayu</option>
+          <option value="ml">മലയാളം</option>
+          <option value="mt">Malti</option>
+          <option value="mi">Māori</option>
+          <option value="mr">मराठी</option>
+          <option value="mn">Монгол</option>
+          <option value="my">မြန်မာ</option>
+          <option value="ne">नेपाली</option>
+          <option value="no">Norsk</option>
+          <option value="or">ଓଡ଼ିଆ</option>
+          <option value="ps">پښتو</option>
+          <option value="fa">فارسی</option>
+          <option value="pl">Polski</option>
+          <option value="pt">Português</option>
+          <option value="pa">ਪੰਜਾਬੀ</option>
+          <option value="ro">Română</option>
+          <option value="ru">Русский</option>
+          <option value="sm">Gagana Sāmoa</option>
+          <option value="gd">Gàidhlig</option>
+          <option value="sr">Српски</option>
+          <option value="st">Sesotho</option>
+          <option value="sn">Shona</option>
+          <option value="sd">سنڌي</option>
+          <option value="si">සිංහල</option>
+          <option value="sk">Slovenčina</option>
+          <option value="sl">Slovenščina</option>
+          <option value="so">Soomaali</option>
+          <option value="es">Español</option>
+          <option value="su">Basa Sunda</option>
+          <option value="sw">Kiswahili</option>
+          <option value="sv">Svenska</option>
+          <option value="tl">Filipino</option>
+          <option value="tg">Тоҷикӣ</option>
+          <option value="ta">தமிழ்</option>
+          <option value="te">తెలుగు</option>
+          <option value="th">ไทย</option>
+          <option value="tr">Türkçe</option>
+          <option value="uk">Українська</option>
+          <option value="ur">اردو</option>
+          <option value="uz">Oʻzbekcha</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="cy">Cymraeg</option>
+          <option value="xh">isiXhosa</option>
+          <option value="yi">ייִדיש</option>
+          <option value="yo">Yorùbá</option>
+          <option value="zu">isiZulu</option>
+          </select>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -73,17 +181,18 @@
         <article class="feature-project" id="fluffyfighter" aria-labelledby="titre-fighter">
           <div class="feature-copy">
             <span class="overline muted-gold">01 / Le jeu principal</span>
-            <h3 id="titre-fighter">FluffyFighter</h3>
+            <h3 id="titre-fighter">Fluffy Fighters Tactical</h3>
             <div class="fine-rule fine-rule-light"></div>
-            <p>Le projet de jeu vidéo principal de Lightcroft. Un univers de combat développé avec Fluffy Engine.</p>
+            <p>Le projet de jeu vidéo principal de Lightcroft. Un univers tactique et de combat développé avec Fluffy Engine.</p>
             <p class="feature-aside">Cette vitrine accueillera les visuels, les actualités et les présentations officielles du jeu.</p>
             <a href="#engine" class="feature-link">Le moteur du projet <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="feature-art" aria-label="Emblème typographique de FluffyFighter">
-            <div class="feature-cutout">
-              <span class="feature-geometric" aria-hidden="true"></span>
-              <span class="feature-initial">F</span>
-              <span class="feature-art-bottom">FluffyFighter · Lightcroft</span>
+          <div class="feature-art" aria-label="Illustration de Fluffy Fighters Tactical">
+            <div class="feature-cutout artwork-frame">
+              <img class="feature-artwork" src="assets/images/fluffyfighters-illustration.png" alt="Illustration officielle de Fluffy Fighters Tactical" loading="lazy" onerror="this.hidden=true">
+              <span class="feature-geometric fallback-art" aria-hidden="true"></span>
+              <span class="feature-initial fallback-art">F</span>
+              <span class="feature-art-bottom">Fluffy Fighters Tactical · Lightcroft</span>
             </div>
           </div>
         </article>
@@ -92,8 +201,9 @@
           <article class="project-stock" id="fluffycard" aria-labelledby="titre-card">
             <div class="stock-face">
               <div class="project-art art-cards" aria-hidden="true">
-                <div class="deck-card card-back"><span>✦</span></div>
-                <div class="deck-card card-front"><span>F</span><small>FluffyCard</small></div>
+                <img class="card-artwork" src="assets/images/fluffycard-illustration.png" alt="Illustration de FluffyCard : chaton chevalier à l'épée" loading="lazy" onerror="this.hidden=true">
+                <div class="deck-card card-back fallback-art"><span>✦</span></div>
+                <div class="deck-card card-front fallback-art"><span>F</span><small>FluffyCard</small></div>
                 <span class="art-side-label">Création / Jeux</span>
               </div>
               <div class="project-body">
@@ -108,7 +218,8 @@
           <article class="project-stock" id="fluffydraw" aria-labelledby="titre-draw">
             <div class="stock-face">
               <div class="project-art art-draw" aria-hidden="true">
-                <div class="drawing-sheet">
+                <img class="draw-artwork" src="assets/images/fluffydraw-illustration.png" alt="Illustration de FluffyDraw : chevalet et atelier de peinture" loading="lazy" onerror="this.hidden=true">
+                <div class="drawing-sheet fallback-art">
                   <svg viewBox="0 0 240 160" role="presentation" focusable="false">
                     <path d="M28 126 Q64 52 111 107 T211 53" fill="none" stroke="#9b6b33" stroke-width="3"/>
                     <path d="M63 134 L78 88 L159 29 L181 51 L99 111 Z" fill="#ebe5da" stroke="#2b2621" stroke-width="2"/>
@@ -166,5 +277,22 @@
       <div class="footer-end"><span>© <time datetime="2026">2026</time> Lightcroft</span><a href="https://github.com/0Lightcroft" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
     </div>
   </footer>
+<script>
+  /* Translation is delivered by Google Translate in a separate page.
+     Not a promise of full coverage or professional localization. */
+  (() => {
+    const chooser = document.getElementById("language-select");
+    if (!chooser) return;
+    chooser.addEventListener("change", () => {
+      const lang = chooser.value;
+      if (lang === "fr") return;
+      const url = new URL(window.location.href);
+      url.hash = "";
+      const redirect = "https://translate.google.com/translate?sl=fr&tl="
+        + encodeURIComponent(lang) + "&u=" + encodeURIComponent(url.href);
+      window.open(redirect,"_blank","noopener,noreferrer");
+    });
+  })();
+</script>
 </body>
 </html>
