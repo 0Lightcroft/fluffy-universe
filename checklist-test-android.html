@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FluffyFighter - Customization — Test Android</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { max-width: 850px; margin: 28px auto; padding: 0 20px; font: 15px/1.4 Arial, sans-serif; color: #20262b; background: #fff; }
+    h1 { margin: 0 0 3px; font-size: 24px; }
+    .meta { margin: 0 0 14px; color: #4c565e; font-size: 13px; }
+    h2 { margin: 17px 0 7px; font-size: 17px; }
+    p { margin: 7px 0; }
+    .intro { padding: 11px 14px; background: #f2f6f8; border-left: 3px solid #247ea5; }
+    .tests { list-style: none; padding: 0; margin: 8px 0; }
+    .tests li { margin: 0 0 7px; break-inside: avoid; }
+    .tests label { display: flex; align-items: flex-start; gap: 8px; cursor: pointer; }
+    input[type="checkbox"] { flex: 0 0 auto; width: 15px; height: 15px; margin: 3px 0 0; accent-color: #247ea5; }
+    .feedback { border: 1px solid #bbc5cc; padding: 10px 13px; break-inside: avoid; }
+    .line { min-height: 25px; border-bottom: 1px solid #b6c0c7; margin: 4px 0; }
+    .small { font-size: 13px; }
+    footer { margin-top: 12px; font-size: 12px; color: #4c565e; }
+    @page { size: A4; margin: 13mm; }
+    @media print {
+      body { max-width: none; margin: 0; padding: 0; font-size: 10pt; line-height: 1.25; }
+      h1 { font-size: 18pt; }
+      h2 { font-size: 12pt; margin-top: 11px; }
+      .meta, .small { font-size: 9pt; }
+      .intro { padding: 7px 10px; background: none; border: 1px solid #bbc5cc; }
+      .tests li { margin-bottom: 5px; }
+      .line { min-height: 21px; }
+      footer { font-size: 8pt; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FluffyFighter - Customization</h1>
+    <p class="meta">Fiche simple de test Android · 25 novembre 2026 · Version préparée : 2.0.0 (999044)</p>
+  </header>
+  <div class="intro">
+    <p><strong>Merci pour votre aide !</strong> Comptez environ 15 à 20 minutes.</p>
+    <p>Ce test concerne le créateur de chats autonome : apparence, sauvegarde et fichiers JSON. Il n’y a pas de combat, de salon en ligne ni de multijoueur à tester.</p>
+  </div>
+  <h2>Comment faire</h2>
+  <p>Utilisez le lien de test transmis par Lightcroft. Acceptez l’invitation, puis installez l’application depuis Google Play.</p>
+  <p>Cochez uniquement les résultats obtenus. Si un point bloque, laissez la case vide et indiquez son numéro dans votre retour. Vous pouvez noter « non testé ».</p>
+  <h2>Les tests</h2>
+  <ul class="tests">
+    <li><label><input type="checkbox"><span><strong>01. Installer et lancer.</strong> L’application s’installe, s’ouvre et affiche le créateur sans blocage ni fermeture.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>02. Utiliser le tactile.</strong> Boutons, onglets, curseurs et défilement répondent ; les menus restent accessibles.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>03. Tourner et zoomer le chat.</strong> Les gestes prévus dans la vue 3D répondent ; le modèle reste visible.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>04. Modifier le pelage.</strong> Essayer plusieurs styles et couleurs ; le résultat correspond au choix.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>05. Modifier les yeux.</strong> Essayer plusieurs choix et réglages ; le résultat se voit sur le chat.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>06. Modifier la morphologie.</strong> Déplacer plusieurs réglages de silhouette ; le chat réagit et les commandes restent utilisables.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>07. Ajouter de la peinture.</strong> Choisir une couleur et un détail, l’appliquer puis le modifier ; vérifier le modèle.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>08. Conserver l’apparence.</strong> Valider, fermer puis relancer l’application ; retrouver le même chat avec ses modifications.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>09. Gérer plusieurs chats.</strong> Créer un second chat différent, passer de l’un à l’autre et conserver leurs apparences distinctes.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>10. Exporter un JSON.</strong> Exporter une création avec le sélecteur Android et vérifier l’enregistrement du fichier.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>11. Importer un JSON.</strong> Importer le fichier exporté ; retrouver la création sans fermeture de l’application.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>12. Ouvrir les liens.</strong> Dans les réglages, ouvrir Confidentialité puis Assistance ; vérifier les pages et le retour à l’application.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>13. Observer la fluidité.</strong> Après plusieurs minutes de changements et de rotation, aucun blocage, fermeture ou ralentissement gênant.</span></label></li>
+    <li><label><input type="checkbox"><span><strong>14. Facultatif — mode avion après installation.</strong> Relancer et vérifier le créateur local et la sauvegarde. Ne pas tester les pages web dans ce mode.</span></label></li>
+  </ul>
+  <p class="small"><strong>Chauffe :</strong> aucune / légère / forte / non vérifiée &nbsp; · &nbsp; <strong>Fluidité :</strong> bonne / ralentissements occasionnels / gênante / non vérifiée</p>
+  <p class="line small"><strong>Point le plus réussi :</strong></p>
+  <p class="line small"><strong>Amélioration prioritaire :</strong></p>
+  <h2>Retour à copier pour chaque problème</h2>
+  <div class="feedback small">
+    <p class="line"><strong>Modèle de l’appareil :</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>Version Android :</strong></p>
+    <p class="line"><strong>Version de l’application, si visible :</strong></p>
+    <p class="line"><strong>Numéro du test et étapes suivies :</strong></p>
+    <p class="line"><strong>Résultat attendu :</strong></p>
+    <p class="line"><strong>Résultat observé :</strong></p>
+    <p><strong>Fréquence :</strong> une fois / parfois / à chaque essai</p>
+    <p>Capture ou courte vidéo facultative, sans information personnelle.</p>
+  </div>
+  <footer>Aucun mot de passe, adresse de compte, numéro de série ou identifiant d’appareil n’est nécessaire. Envoyez le retour par le canal indiqué avec l’invitation au test. Merci !</footer>
+</body>
+</html>
+

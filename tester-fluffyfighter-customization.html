@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Crée ton chat en 3D et participe aux premiers tests Android de FluffyFighter - Customization.">
+<title>Tester FluffyFighter - Customization</title>
+<style>
+:root{color-scheme:light;font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;color:#2b2621;background:#f6f3ec}
+*{box-sizing:border-box}body{margin:0;padding:clamp(24px,7vw,80px) 20px}.wrap{max-width:770px;margin:auto}
+header{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:30px}
+.brand{font-size:14px;font-weight:700;color:#9b6b33}nav{display:flex;gap:12px}a{color:#895c28;text-underline-offset:4px;overflow-wrap:anywhere}
+a:focus-visible,button:focus-visible{outline:2px solid #9b6b33;outline-offset:5px}
+button{font:inherit;font-size:14px;padding:4px 8px;color:#65594d;background:transparent;border:1px solid transparent;cursor:pointer}
+button[aria-pressed="true"]{color:#2b2621;border-color:#c9bba6;background:#fffdf8}
+main{padding:clamp(24px,5vw,42px);border:1px solid #ded4c4;border-radius:12px;background:#fffdf8}
+h1{margin:0 0 23px;font-size:clamp(25px,4vw,36px);line-height:1.2;letter-spacing:-.025em}
+p{margin:14px 0}.join{margin-bottom:0}footer{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;font-size:13px}
+[hidden]{display:none!important}@media(max-width:420px){body{padding:24px 14px}main{padding:22px}.join{line-height:1.9}}
+</style>
+</head>
+<body><div class="wrap">
+<header><a class="brand" href="index.html">Lightcroft</a><nav aria-label="Langue / Language"><button type="button" id="fr-button" aria-pressed="true" aria-controls="fr">Français</button><button type="button" id="en-button" aria-pressed="false" aria-controls="en">English</button></nav></header>
+<main><h1>FluffyFighter - Customization</h1>
+<section id="fr" lang="fr">
+<p>Je crée un studio pour imaginer ton propre chat en 3D 🐾</p>
+<p>Envie de l’essayer sur Android ? Tes retours m’aideront à faire avancer le projet.</p>
+<p class="join">Pour participer : <a href="mailto:rglightcroft@gmail.com?subject=FluffyFighter%20-%20Customization%20%3A%20test%20Android">demander l’accès par e-mail</a>, puis <a href="https://play.google.com/apps/internaltest/4698792451470682545" target="_blank" rel="noopener noreferrer">rejoindre le test</a>.</p>
+</section>
+<section id="en" lang="en" hidden>
+<p>I’m making a studio where you can create your own 3D cat 🐾</p>
+<p>Want to try it on Android? Your feedback will help shape the project.</p>
+<p class="join">To take part: <a href="mailto:rglightcroft@gmail.com?subject=FluffyFighter%20-%20Customization%3A%20Android%20test">ask for access by email</a>, then <a href="https://play.google.com/apps/internaltest/4698792451470682545" target="_blank" rel="noopener noreferrer">join the test</a>.</p>
+</section></main>
+<footer><a href="checklist-test-android.html">Fiche de test / Test sheet</a><a href="privacy-fluffyfighter-customization.html">Confidentialité / Privacy</a><a href="support-fluffyfighter-customization.html">Assistance / Support</a></footer>
+</div>
+<script>
+for(const language of ['fr','en']) document.getElementById(language+'-button').addEventListener('click',()=>{
+ for(const code of ['fr','en']){document.getElementById(code).hidden=code!==language;document.getElementById(code+'-button').setAttribute('aria-pressed',String(code===language));}
+ document.documentElement.lang=language;
+});
+</script>
+</body></html>
+

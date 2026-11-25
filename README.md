@@ -2,6 +2,12 @@
 
 Site vitrine statique officiel du dépôt `0Lightcroft/fluffy-universe`.
 
+## Tester FluffyFighter - Customization sur Android
+
+Je crée un studio pour imaginer ton propre chat en 3D 🐾  
+Envie de l’essayer sur Android ? Tes retours m’aideront à faire avancer le projet.  
+[Participer au test Android](https://0lightcroft.github.io/fluffy-universe/tester-fluffyfighter-customization.html)
+
 ## Contenu
 
 - `index.html` : page d'accueil et présentation des projets.
