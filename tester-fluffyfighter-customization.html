@@ -1,48 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="closed-testing-status" content="pending_review">
-<meta name="description" content="Le test fermé Android de FluffyFighter - Customization se prépare. Rejoins FluffyTests pour participer à son ouverture.">
-<title>Tester FluffyFighter - Customization</title>
-<style>
-:root{color-scheme:light;font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;color:#2b2621;background:#f6f3ec}
-*{box-sizing:border-box}body{margin:0;padding:clamp(24px,7vw,80px) 20px}.wrap{max-width:770px;margin:auto}
-header{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:30px}
-.brand{font-size:14px;font-weight:700;color:#9b6b33}nav{display:flex;gap:12px}a{color:#895c28;text-underline-offset:4px;overflow-wrap:anywhere}
-a:focus-visible,button:focus-visible{outline:2px solid #9b6b33;outline-offset:5px}
-button{font:inherit;font-size:14px;padding:4px 8px;color:#65594d;background:transparent;border:1px solid transparent;cursor:pointer}
-button[aria-pressed="true"]{color:#2b2621;border-color:#c9bba6;background:#fffdf8}
-main{padding:clamp(24px,5vw,42px);border:1px solid #ded4c4;border-radius:12px;background:#fffdf8}
-h1{margin:0 0 23px;font-size:clamp(25px,4vw,36px);line-height:1.2;letter-spacing:-.025em}
-p{margin:14px 0}.join{margin-bottom:0}footer{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;font-size:13px}
-.steps{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.step{display:inline-block;padding:10px 14px;border:1px solid #9b6b33;border-radius:7px;background:#9b6b33;color:#fffdf8;font:inherit;font-size:15px;line-height:1.4;text-decoration:none}
-[hidden]{display:none!important}@media(max-width:420px){body{padding:24px 14px}main{padding:22px}.join{line-height:1.9}}
-</style>
-</head>
-<body><div class="wrap">
-<header><a class="brand" href="index.html">Lightcroft</a><nav aria-label="Langue / Language"><button type="button" id="fr-button" aria-pressed="true" aria-controls="fr">Français</button><button type="button" id="en-button" aria-pressed="false" aria-controls="en">English</button></nav></header>
-<main><h1>FluffyFighter - Customization</h1>
-<section id="fr" lang="fr">
-<p>Je crée un studio pour imaginer ton propre chat en 3D 🐾</p>
-<p>Bêta en cours de validation Google Play. Le groupe est déjà ouvert.</p>
-<p class="join">Rejoins FluffyTests avec ton compte Google. À l’ouverture, utilise le même compte pour accepter la participation sur Google Play.</p>
-<div class="steps"><a class="step" href="https://groups.google.com/g/fluffytests" target="_blank" rel="noopener noreferrer">1. Rejoindre FluffyTests</a><a class="step" href="https://play.google.com/apps/testing/com.lightcroft.fluffyfighter.customization" target="_blank" rel="noopener noreferrer" title="Participation disponible après validation Google Play">2. Participer sur Google Play</a></div>
-</section>
-<section id="en" lang="en" hidden>
-<p>I’m making a studio where you can create your own 3D cat 🐾</p>
-<p>The beta is awaiting Google Play validation. The group is already open.</p>
-<p class="join">Join FluffyTests with your Google account. When the test opens, use the same account to opt in on Google Play.</p>
-<div class="steps"><a class="step" href="https://groups.google.com/g/fluffytests" target="_blank" rel="noopener noreferrer">1. Join FluffyTests</a><a class="step" href="https://play.google.com/apps/testing/com.lightcroft.fluffyfighter.customization" target="_blank" rel="noopener noreferrer" title="Participation available after Google Play approval">2. Join on Google Play</a></div>
-</section></main>
-<footer><a href="checklist-test-android.html">Fiche de test / Test sheet</a><a href="privacy-fluffyfighter-customization.html">Confidentialité / Privacy</a><a href="support-fluffyfighter-customization.html">Assistance / Support</a><a href="mailto:rglightcroft@gmail.com">E-mail d’assistance / Support email</a></footer>
-</div>
-<script>
-for(const language of ['fr','en']) document.getElementById(language+'-button').addEventListener('click',()=>{
- for(const code of ['fr','en']){document.getElementById(code).hidden=code!==language;document.getElementById(code+'-button').setAttribute('aria-pressed',String(code===language));}
- document.documentElement.lang=language;
-});
-</script>
-</body></html>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#fafaf8" name="theme-color"/><title>Tester le créateur de chats Android — Lightcroft</title>
+<meta content="Pelages, couleurs, yeux et silhouette : découvrez le créateur de chats en 3D de Fluffy Fighters et participez au test Android." name="description"/>
+<meta content="Tester le créateur de chats Android — Lightcroft" property="og:title"/>
+<meta content="Pelages, couleurs, yeux et silhouette : découvrez le créateur de chats en 3D de Fluffy Fighters et participez au test Android." property="og:description"/>
+<meta content="https://0lightcroft.github.io/fluffy-universe/assets/creator-desktop.webp" property="og:image"/>
+<link href="assets/lightcroft.png" rel="icon"/>
+<link href="assets/site.css" rel="stylesheet"/>
+<script defer="" src="assets/site.js"></script></head>
+<body><a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+<div class="wrap header-inner"><a class="brand" href="index.html"><img alt="" height="32" src="assets/lightcroft.png" width="32"/><span>Lightcroft</span></a>
+<nav aria-label="Navigation"><a data-en="The game" data-fr="Le jeu" href="index.html#jeu">Le jeu</a><a data-en="Software" data-fr="Logiciels" href="index.html#logiciels">Logiciels</a><a data-en="Engine" data-fr="Le moteur" href="index.html#engine">Le moteur</a><a data-en="Contact" data-fr="Contact" href="index.html#contact">Contact</a></nav>
+<div aria-label="Langue / Language" class="languages" role="group"><button aria-pressed="true" data-language="fr" type="button">FR</button><button aria-pressed="false" data-language="en" type="button">EN</button></div></div></header>
+<main class="wrap tester" id="contenu">
+<div class="tester-top">
+<div>
+<p class="eyebrow" data-en="FluffyFighter · Customization" data-fr="FluffyFighter · Customization">FluffyFighter · Customization</p>
+<h1 data-en="Create your own 3D cat." data-fr="Créez votre chat en 3D.">Créez votre chat en 3D.</h1>
+<p class="lead" data-en="A free Android character creator from my game, Fluffy Fighters. Choose its coat, eyes, build, paint and little details to give it a character of its own." data-fr="Un créateur de personnages gratuit pour Android, tiré de mon jeu Fluffy Fighters. Pelage, yeux, silhouette, peinture et petits détails : à vous de lui donner son caractère.">Un créateur de personnages gratuit pour Android, tiré de mon jeu Fluffy Fighters. Pelage, yeux, silhouette, peinture et petits détails : à vous de lui donner son caractère.</p>
+<p class="muted" data-en="You can save several cats and find them again when you reopen the app. This is the character creator, without the game’s combat." data-fr="Vous pouvez enregistrer plusieurs chats et retrouver vos créations à la prochaine ouverture. Il s’agit du créateur de personnages, sans les combats du jeu.">Vous pouvez enregistrer plusieurs chats et retrouver vos créations à la prochaine ouverture. Il s’agit du créateur de personnages, sans les combats du jeu.</p></div>
+<figure class="tester-screen"><img alt="Capture réelle du créateur de chats" fetchpriority="high" height="781" src="assets/creator-desktop.webp" width="1264"/></figure></div>
+<section aria-labelledby="join-title" class="join-panel">
+<h2 data-en="Join the test" data-fr="Participer au test" id="join-title">Participer au test</h2>
+<p data-en="Google Play requires you to join the testing group before accessing the app. Use the same Google account for both links. There’s no need to email me." data-fr="Google Play demande de rejoindre le groupe de test avant d’accéder à l’application. Utilisez le même compte Google pour les deux liens. Aucun e-mail à m’envoyer.">Google Play demande de rejoindre le groupe de test avant d’accéder à l’application. Utilisez le même compte Google pour les deux liens. Aucun e-mail à m’envoyer.</p>
+<div class="join-actions">
+<div><a class="button" data-en="Join the group" data-fr="Rejoindre le groupe" href="https://groups.google.com/g/fluffytests" rel="noopener noreferrer" target="_blank">Rejoindre le groupe</a><small data-en="FluffyTests on Google Groups" data-fr="FluffyTests sur Google Groups">FluffyTests sur Google Groups</small></div>
+<div><a class="button button-light" data-en="Install with Google Play" data-fr="Installer avec Google Play" href="https://play.google.com/apps/testing/com.lightcroft.fluffyfighter.customization" rel="noopener noreferrer" target="_blank">Installer avec Google Play</a><small data-en="Opt in to the test, then install the app" data-fr="Accepter le test, puis installer l’application">Accepter le test, puis installer l’application</small></div></div>
+<p class="small muted" data-en="If Google Play says the test is unavailable, check which account you’re using and try again once the release has been approved." data-fr="Si Google Play indique que le test n’est pas disponible, vérifiez le compte utilisé et réessayez après la validation de la version.">Si Google Play indique que le test n’est pas disponible, vérifiez le compte utilisé et réessayez après la validation de la version.</p></section>
+<section class="tester-notes">
+<h2 data-en="What helps me most" data-fr="Ce qui m’aide le plus">Ce qui m’aide le plus</h2>
+<p data-en="Does the cat display correctly? Are the controls easy to use? Are your creations still there after closing the app? Feedback on any one of these is welcome." data-fr="Le chat s’affiche-t-il correctement ? Les réglages sont-ils faciles à utiliser ? Vos créations sont-elles conservées après fermeture ? Un retour sur l’un de ces points suffit.">Le chat s’affiche-t-il correctement ? Les réglages sont-ils faciles à utiliser ? Vos créations sont-elles conservées après fermeture ? Un retour sur l’un de ces points suffit.</p>
+<div class="actions"><a class="text-link" data-en="View the test checklist" data-fr="Voir la fiche de test" href="checklist-test-android.html">Voir la fiche de test</a><a class="text-link" data-en="Send feedback" data-fr="Envoyer un retour" href="mailto:rglightcroft@gmail.com?subject=Test%20Android%20Customization">Envoyer un retour</a></div></section>
+<aside class="steam-note">
+<p data-en="The full game is in development." data-fr="Le jeu complet est en développement.">Le jeu complet est en développement.</p><a class="text-link" data-en="Fluffy Fighters on Steam" data-fr="Fluffy Fighters sur Steam" href="https://store.steampowered.com/app/3918820/Fluffy_Fighters_Tactique/" rel="noopener noreferrer" target="_blank">Fluffy Fighters sur Steam</a></aside></main>
+<footer class="site-footer wrap"><a class="brand" href="index.html">Lightcroft</a>
+<div><a data-en="Privacy" data-fr="Confidentialité" href="privacy-fluffyfighter-customization.html">Confidentialité</a><a data-en="Support" data-fr="Assistance" href="support-fluffyfighter-customization.html">Assistance</a><a href="https://github.com/0Lightcroft/fluffy-universe" rel="noopener noreferrer" target="_blank">GitHub</a></div><span>© 2026 Lightcroft</span></footer></body></html>
